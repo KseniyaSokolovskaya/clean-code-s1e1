@@ -42,6 +42,12 @@ body {
 
 .add-task__row {
     display: flex;
+    padding: 20px 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: inherit;
 }
 
 ul {
@@ -50,7 +56,7 @@ ul {
 }
 
 li,
-h3 {
+h2 {
   list-style: none;
 }
 
@@ -59,7 +65,7 @@ button {
   outline: none;
 }
 
-button {
+.btn {
   background: none;
   border: 0px;
   color: #888;
@@ -69,12 +75,11 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
   color: #3a3A3a;
 }
 /* Heading */
-h3,
-label[for="new-task"] {
+.title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -84,7 +89,7 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.task__text {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -97,73 +102,70 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.task__text:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
+.add-task {
+  margin-top: 1em;
+
 }
-input#new-task {
+.add-task__task {
   width: 318px;
 }
 
 /* Task list */
-li {
+.list__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-li > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.task__checkbox {
   margin: 0 10px;
 }
 
-li > label {
+.list__item .label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li > input[type="text"] {
+.list__item .task__text {
   width: 226px;
+  display: none;
 }
 
-button.delete img {
+.btn__icon {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.btn__icon:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+.complete-tasks .label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
-  display: none;
-}
 
-ul li.editMode input[type=text] {
+
+.editMode .task__text {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+.editMode .label {
   display: none;
 }
