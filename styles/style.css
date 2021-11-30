@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -45,29 +45,30 @@ body {
     padding: 20px 0;
 }
 
-h1 {
+.title-h1 {
   margin: 0;
   font-size: inherit;
 }
 
-ul {
+.list {
   margin: 0;
   padding: 0;
 }
 
-li,
-h2 {
+.list__item,
+.title {
   list-style: none;
 }
 
-input,
-button {
+.task,
+.task__checkbox,
+.btn {
   outline: none;
 }
 
 .btn {
   background: none;
-  border: 0px;
+  border: 0;
   color: #888;
   font-size: 15px;
   width: 60px;
